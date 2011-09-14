@@ -1,0 +1,141 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }  
+         
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>attack.sikuli</h2> <a href="attack.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">def</span> skip_more_mafia():
+        <span class="skw">find</span>(<img src="HMMIlHiIMKUl.png" />)
+        hover(<img src="1314087904035.png" />)
+        <span class="skw">click</span>(<img src="1314087916882.png" />)
+        <span class="skw">click</span>(<img src="F1l.png" />)
+
+
+<span class="kw">def</span> full_screen():
+        <span class="cmt"># Turn screen full
+</span>        hover(<img src="1314084232728.png" />)
+        <span class="skw">click</span>(<img src="5.png" />)
+        <span class="skw">click</span>(<img src="1314084149113.png" />)
+
+
+<span class="kw">def</span> open_attack():
+        <span class="cmt"># Open attack window
+</span>        hover(<img src="Z.png" />)
+        <span class="skw">click</span>(<img src="ff.png" />)
+        <span class="skw">click</span>(<img src="1314083920754.png" />)
+
+<span class="kw">def</span> close_window():
+        <span class="skw">click</span>(<img src="X.png" />)
+
+<span class="kw">def</span> get_money():
+        <span class="kw">for</span> x <span class="kw">in</span> findAll(<img src="1315535521722.png" />):
+                <span class="cmt"># Get money
+</span>                hover(<img src="1315535538044.png" />)
+                <span class="skw">click</span>(<img src="7.png" />)
+                <span class="skw">click</span>(<img src="1315535558482.png" />)
+
+<span class="kw">def</span> has_bullets():
+        <span class="cmt"># Returns true if the screen has bullets, otherwise, false.
+</span>        <span class="kw">return</span> <span class="kw">not</span> (<span class="skw">find</span>(<img src="1314088449654.png" />))
+
+<span class="kw">def</span> attack():
+        hover(<img src="1314088569457.png" />)
+        <span class="skw">click</span>(<img src="1314088588017.png" />)
+        <span class="skw">click</span>(<img src="ATTACK.png" />)
+        <span class="skw">wait</span>(<img src="1314088720880.png" />)
+
+<span class="kw">def</span> close_attack_result():
+        hover(<img src="1314088679928.png" />)
+        <span class="skw">click</span>(<img src="1314088720880.png" />)
+        <span class="skw">click</span>(<img src="A.png" />)
+
+<span class="kw">def</span> save_money():
+        <span class="cmt"># open bank
+</span>        hover(<img src="1315535105119.png" />)
+        <span class="skw">click</span>(<img src="1315535139765.png" />)
+
+        <span class="cmt"># save money
+</span>        hover(<span class="str">"sell"</span>)
+        <span class="skw">click</span>(<img src="1315535499189.png" />)
+        <span class="skw">popup</span>(<span class="str">"over"</span>)
+        <span class="kw">return</span>
+
+        <span class="kw">print</span> hover(<img src="Illili.png" />)
+        <span class="skw">click</span>(<img src="1315535320305.png" />)
+        close_window()
+
+<span class="kw">def</span> find_all(obj):
+        <span class="kw">for</span> x <span class="kw">in</span> findAll(obj):
+                <span class="kw">print</span> x
+        <span class="skw">popup</span>(<span class="str">"over"</span>)
+
+get_money()
+</pre>
+</body>
+</html>
